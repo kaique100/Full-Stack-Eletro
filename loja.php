@@ -2,7 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Nossas lojas - Full Stack Eletro</title>
     <link rel="stylesheet" href="css/estilo.css">
 
@@ -13,40 +17,43 @@
     include_once('menu.php');
    ?>
     <!-- fim menu -->
-    <main>
+    <main class="container">
             <h2>Nossas lojas</h2>
             <hr>
-            <table border="0" width="100%" cellpadding="20">
-                <tr class="fonte">
-                    <td width="33%" >
-                        <p><font>Rio de Janeiro</font></p>
-                        <p><font>Avenida Presidente Vargas, 5000</font></p>
-                        <p><font>10 &ordm; andar</font></p>
-                        <p><font>Centro</font></p>
-                        <p><font>(21) 3333-3333</font></p>
-                    </td>
-                    <td width="33%">
-                        <p><font>Rio de Janeiro</font></p>
-                        <p><font>Avenida Presidente Vargas, 5000</font></p>
-                        <p><font>10 &ordm; andar</font></p>
-                        <p><font>Centro</font></p>
-                        <p><font>(21) 3333-3333</font></p>
-                    </td>
-                    <td width="33%">
-                        <p><font>Rio de Janeiro</font></p>
-                        <p><font>Avenida Presidente Vargas, 5000</font></p>
-                        <p><font>10 &ordm; andar</font></p>
-                        <p><font>Centro</font></p>
-                        <p><font>(21) 3333-3333</font></p>
-                    </td>
-              
-                </tr>
-            </table>
+            
+ <table class="table table-danger">
+  <thead>
+    <tr>
+      <th scope="col">N°</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Rua</th>
+      <th scope="col">Bairro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>São Paulo</td>
+      <td>Rua Sou Recoder</td>
+      <td>Dá Gloria</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Rio de Janeiro</td>
+      <td>Rua Estou na batalha</td>
+      <td>Dá Gloria</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Rio de Janeiro</td>
+      <td>Rua Para entrar para o Itau</td>
+      <td>Dá Gloria</td>
+    </tr>
+  </tbody>
+</table>
     </main>
-    <footer id="rodape">
-        <h4 id="formasPagamento"> Formas de pagamento</h4>
-        <img width="35%" src="imagens/pag.jpg" alt="Formas de pagamento">
-        <p> &copy Recode Pro</p>
- </footer>
+    <?php
+        include_once("rodape.php")
+    ?>
 </body>
 </html>
