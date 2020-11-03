@@ -2,18 +2,7 @@
 
 include_once("conexao.php");
 
-if (isset($_POST['nomeCliente']) && isset($_POST['endereco']) && isset($_POST['telefone']) && isset($_POST['nomeProduto']) && isset($_POST['valorUnitario']) && isset($_POST['quantidade']) && isset($_POST['valorTotal'])) {
-    $nome = $_POST['nomeCliente'];
-    $end = $_POST['endereco'];
-    $tel = $_POST['telefone'];
-    $nomeProd = $_POST['nomeProduto'];
-    $valUnit = $_POST['valorUnitario'];
-    $quant = $_POST['quantidade'];
-    $valTotal = $_POST['valorTotal'];
 
-    $sql = "insert into pedidos (nomeCliente, endereco, telefone, nomeProduto, valorUnitario, quantidade, valorTotal) value ('$nome','$end','$end','$nomeProd','$valUnit','$quant','$valTotal')";
-    $result = $conn->query($sql);
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,37 +31,42 @@ if (isset($_POST['nomeCliente']) && isset($_POST['endereco']) && isset($_POST['t
         <h2>Pedidos</h2>
         <hr>
 
-        <form method="post" class="formContato container">
+        <form method="post" action="pedidosEnvio.php" class="formContato container">
 
         <div class="form-group">
                 <label for="exampleInputEmail1">Nome</label>
-                <input type="text" name="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="text" name="nomeCliente" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+                
             </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Endereço</label>
-                <input type="text" name="end" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="text" name="endereco" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
+                
+            </div>
+        <div class="form-group">
+                <label for="exampleInputEmail1">Telefone</label>
+                <input type="number" name="telefone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                
             </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Nome do produto</label>
-                <input type="text" name="nomeProd" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome do produto">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="text" name="nomeProduto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome do produto">
+                
             </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Valor unitário</label>
-                <input type="text" name="valUnit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Valor unitário">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="text" name="valorUnitario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Valor unitário">
+                
             </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Quantidade</label>
-                <input type="number" name="quant" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Quantidade">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="number" name="quantidade" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Quantidade">
+                
             </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Valor total</label>
-                <input type="number" name="valTotal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Valor total">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <input type="number" name="valorTotal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Valor total">
+                
             </div>
             
         
