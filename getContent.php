@@ -17,7 +17,7 @@
     $sql = "select * from $tabela";
     $result = $conn->query($sql);
 
-   print_r ( json_encode( $result->fetch_all(MYSQLI_ASSOC)));
+   echo  json_encode( $result->fetch_all(MYSQLI_ASSOC), true);
 
    mysqli_close($conn);
           

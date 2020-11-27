@@ -36,7 +36,7 @@
     <main class="container">
             <h2>Contato</h2>
             <hr>
-            <section class="contato">
+            <section class="contato form-group">
                 
                     <div >
                         <img width="20%" src="imagens/email.png" alt="">
@@ -51,15 +51,16 @@
               
             </section>
         <h3>Formulário para entrar em contato conosco</h3>
-            <form method="post" class="formContato">
+            <form method="post" class="formContato  m-6">
             <div class="form-group">
-    <label for="exampleInputEmail1">Digite seu nome</label>
-    <input type="text" name="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome">
-    </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Mensagem</label>
-    <input type="text" name="msg" class="form-control" id="exampleInputPassword1" placeholder="Como podemos te ajudar?">
-  </div>
+            <label for="exampleInputEmail1">Digite seu nome</label>
+            <input type="text" name="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome"> 
+            </div>
+            <br/><br/><br/>
+            <div class="form-group">
+             <label for="exampleInputPassword1">Mensagem</label>
+            <input type="text" name="msg" class="form-control" id="exampleInputPassword1" placeholder="Como podemos te ajudar?">
+            </div>
  
   <button type="submit" class="btn btn-danger">Enviar</button>
 </form>
