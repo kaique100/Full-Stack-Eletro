@@ -6,7 +6,8 @@ const ProductsPage = () => {
         const [prods, setProds] = useState([]);
 
         useEffect (async() => {
-            const res = await fetch('http://localhost:2222/');
+            const res = await fetch('http://localhost:2222');
+            console.log(res);
             setProds(await res.json())
     }, [])
 
